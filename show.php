@@ -24,7 +24,7 @@ if (mysqli_connect_errno($conn))
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <br>
-<div class="container" bg-white mx-auto rounded-lg shadow mt-3 p-4 mb-3">
+<div class="container">
     <table class = "table table-bordered table-hover" width="1200" align="center" border="1">
         <thead class="thead-dark">
     <tr>
