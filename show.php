@@ -30,7 +30,10 @@ while($Result = mysqli_fetch_array($res))
   <tr>
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
-    <td><button type="button" class="btn btn-primary">Del</button> <button type="button" class="btn btn-primary">Edit</button></td>
+    <td align="center"><button class="btn btn-primary"
+        onclick='Edit(<?php echo json_encode(["id" => $Result["ID"], "name" => $Result["Name"], "comment" => $Result["Comment"], "link" => $Result["Link"]]); ?>)'>Edit</button>
+      <button class="btn btn-danger" onclick="Delete(<?php echo $Result['ID']; ?>)">Delete</button>
+    </td>
   </tr>
 <?php
 }
