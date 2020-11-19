@@ -106,9 +106,6 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 </body>
 
 <script>
-function toggleButton(e) {
-    e.attr("disabled") ? e.removeAttr("disabled") : e.attr("disabled", !0)
-}
 
 function Edit({name, comment, link}) {
     Swal.fire({
